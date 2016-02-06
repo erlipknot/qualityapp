@@ -1,0 +1,159 @@
+table {
+  width: 100%;
+}
+tr {
+  height: 35px;
+}
+
+th {
+  
+  padding: 10px 5px;
+  text-align: left;
+  font-weight: normal;
+}
+
+td{
+  text-align: center;
+  padding: 10px 5px;
+}
+
+.table_result_headers{
+  background-color: #CFCFCF;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.table_result_title{
+  /*background-color: #f2f2f2;*/
+  padding: 5px;
+}
+
+.th_left {
+  width:20%;
+  padding: 10px 5px;
+  text-align: left;
+  font-weight: normal;
+  /*background-color: #f2f2f2;*/
+}
+
+.th_right {
+  width:80%;
+  /*padding: 10px 5px;*/
+  text-align: left;
+  font-weight: normal;
+  /*background-color: #f2f2f2;*/
+}
+
+
+.title {
+  /*background-color: #78A300;*/
+  margin-bottom: 10px;
+}
+
+.title_content{
+  padding: 10px 5px;
+  color: white;
+}
+
+.colored:nth-child(2n) {
+  background-color: #F7F7F7;
+}
+
+.colored:nth-child(2n+1) {
+  background-color: #FFFFFF;
+}
+
+.submit_section{
+  background-color: #CFCFCF;
+  padding: 5px;
+}
+
+.submit_button{
+  /*background-color: #ffa100;*/
+}
+
+.btn_user_name{
+  display: block;
+  height: 30px;
+  width: 250px !important;
+  text-align: center;
+  background-color: #a0be4c;
+  color: white;
+}
+
+
+/*DROPDOWN*/
+
+.dropdown {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.dropdown dd,
+.dropdown dt {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dropdown ul {
+  margin: -1px 0 0 0;
+}
+
+.dropdown dd {
+  position: relative;
+}
+
+.dropdown a,
+.dropdown a:visited {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+}
+
+.dropdown dt a {
+  background-color: #4F6877;
+  display: block;
+  padding: 8px 20px 5px 10px;
+  min-height: 25px;
+  line-height: 24px;
+  overflow: hidden;
+  border: 0;
+  width: 272px;
+}
+
+.dropdown dt a span,
+.multiSel span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 3px 2px 0;
+}
+
+.dropdown dd ul {
+  background-color: #4F6877;
+  border: 0;
+  color: #fff;
+  display: none;
+  left: 0px;
+  padding: 2px 15px 2px 5px;
+  position: absolute;
+  top: 2px;
+  width: 280px;
+  list-style: none;
+  height: 100px;
+  overflow: auto;
+}
+
+.dropdown span.value {
+  display: none;
+}
+
+.dropdown dd ul li a {
+  padding: 5px;
+  display: block;
+}
+
+.dropdown dd ul li a:hover {
+  background-color: #fff;
+}

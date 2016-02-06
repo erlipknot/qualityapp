@@ -1,0 +1,15 @@
+<div>
+  <table>
+    <tr class="submit_section">
+      <td colspan="2" id="d_groups"></td>
+    </tr>
+    <!--<tr>
+      <th class="th_left">Agent name</th>
+      <th class="th_right">Tickets</th>
+    </tr>-->
+    <tr>
+      <td class="th_left" id="agents"></td>
+      <td class="th_right" id="tickets"></td>
+    </tr>
+  </table>
+</div>
