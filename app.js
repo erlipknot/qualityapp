@@ -105,6 +105,8 @@
 
     agent_info: function(event_name){
 
+      //!!FIX AND OPTIMIZE THE SEARCH PART
+
       var tickets_via_mail = this.ajax('getTicketsByChannel',event_name.currentTarget.value, "mail");
       var tickets_via_chat = this.ajax('getTicketsByChannel',event_name.currentTarget.value, "chat");
       var tickets_sat_good = this.ajax('getTicketsBySatisfaction',event_name.currentTarget.value, "good");
