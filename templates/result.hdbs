@@ -1,9 +1,46 @@
 <div>
   <table>
+  	<tr class="current_agent">
+  		<td colspan="3" id="name_agent"></td>
+  	</tr>
     <tr class="submit_section">
-      <td colspan="2" id="d_groups"></td>
-    </tr>
-    <tr>
+      <td class="filter_menu">
+      	<div>
+      		<table>
+      			<tr>
+      				<td id="d_groups"></td>
+      			</tr>
+      			<tr>	
+					<td class="filter_menu_title">Via</td>
+      			</tr>
+      			<tr>
+      				<td>
+      					<ul>
+      						<li><input type="checkbox" name="ticket_via" value="email">&nbsp;Email</li>
+      						<li><input type="checkbox" name="ticket_via" value="chat">&nbsp;Chat</li>
+      						<li><input type="checkbox" name="ticket_via" value="voice">&nbsp;Voice</li>
+      						<li><input type="checkbox" name="ticket_via" value="social_media">&nbsp;Social Media</li>
+      						<li><input type="checkbox" name="ticket_via" value="good_rating">&nbsp;Good Rating</li>
+      						<li><input type="checkbox" name="ticket_via" value="bad_rating">&nbsp;Bad Rating</li>
+      						<li><input type="checkbox" name="ticket_via" value="good_rating_c">&nbsp;Good Rating (c)</li>
+      						<li><input type="checkbox" name="ticket_via" value="bad_rating_c">&nbsp;Bad Rating (c)</li>
+      					</ul>
+      				</td>
+      			</tr>
+      			<tr>
+					<td class="filter_menu_title">Date</td>
+      			</tr>
+      			<tr>
+      				<td><p>From: <input type="text" id="datepicker_from"><br><p>To: <input type="text" id="datepicker_to"></p></td>
+      			</tr>
+      			<tr><td class="filter_menu_title">Pending review by agent</td></tr>
+      			<tr><td>364&nbsp;987&nbsp;654&nbsp;312&nbsp;654</td></tr>
+      			<tr><td class="filter_menu_title">Reviewed by agent</td></tr>
+      			
+      			<tr><td>300&nbsp;785&nbsp;210&nbsp;98&nbsp;12</td></tr>	
+      		</table>
+      	</div>	
+      </td>
       <td class="th_left" id="agents"></td>
       <td class="th_right" id="tickets"></td>
     </tr>

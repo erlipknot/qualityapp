@@ -13,7 +13,6 @@ th {
 }
 
 td{
-  text-align: center;
   padding: 10px 5px;
 }
 
@@ -64,8 +63,25 @@ td{
 }
 
 .submit_section{
-  background-color: #CFCFCF;
+  /*background-color: #CFCFCF;*/
   padding: 5px;
+}
+
+.filter_menu{
+  padding:0px; 
+  margin:0px;
+}
+
+.filter_menu_title{
+  background-color: #CFCFCF;
+  height: 10px;
+}
+
+.current_agent{
+    /*background-color: #CFCFCF;*/
+  font-size: 18px;
+  text-align: left;
+  height: 45px;
 }
 
 .submit_button{

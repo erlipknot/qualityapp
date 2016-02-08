@@ -40,7 +40,9 @@
     events: {
       'app.activated':'loadGroupsAgents',
       'change #groups':'loadAgents',
-      'click #btn_user':'agent_info'
+      'click #btn_user':'agent_info',
+      'click #datepicker_from':'showCalendar',
+      'click #datepicker_to':'showCalendar'
     },
 
     loadGroupsAgents: function() {
@@ -101,6 +103,13 @@
         
 
       });  
+    },
+
+    showCalendar: function(event_name){
+        
+        dt_name = event_name.currentTarget.id;
+
+        this.$("#" + dt_name).datepicker();
     },
 
     agent_info: function(event_name){
@@ -192,12 +201,14 @@
               table_tickets += "</table></div>";
 
               this.$("#tickets").html(table_tickets);
+              this.$("#name_agent").html("Current agent: " + event_name.currentTarget.value);
+              
+
             });
           });
         });
       });
     }
-
   };
 
 }());
