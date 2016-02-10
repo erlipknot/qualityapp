@@ -40,7 +40,7 @@
     events: {
       'app.activated':'loadGroupsAgents',
       'change #groups':'loadAgents',
-      'click #btn_user':'agent_info',
+      'change #agents':'agent_info',
       'click #datepicker_from':'showCalendar',
       'click #datepicker_to':'showCalendar'
     },
@@ -49,9 +49,8 @@
       
       var groups = this.ajax('getGroups');
       var groups_name = new Array();     
-      var agents_name = new Array();
-      var drop_groups = "<select id='groups'><option value='0'>-- Select group --</option>", table_agents;
-      var table_agents;
+      var drop_groups = "<select id='groups'><option value='0'>-- Select group --</option>";
+
 
       this.when(groups).then(function(data){
 
@@ -61,19 +60,9 @@
           drop_groups += "<option value='" + data.name + "'>" + data.name + "</option>";
         });
 
-        this.ajax('getAgents',"Soporte").done(function(data){
-        
-          var agents = data.results;
-        
-          _.each(agents, function(data,k){
-            table_agents += "<tr><td style='padding:1px 0px; height:'22px'><button type='button' id='btn_user' class='btn_user_name' style='width:100%' value='" + data.name + "'>" + data.name + "</button></td></tr>";
-          });
-
 
           this.switchTo('result');
           this.$("#d_groups").html(drop_groups + "</select>");
-          this.$("#agents").html(table_agents);
-        });  
 
       });
 
@@ -89,17 +78,18 @@
       if(data.results.length > 0){
 
         var agents = data.results;
+        table_agents = "<select id='agents'><option value='0'>-- Select an agent --</option>";
       
         _.each(agents, function(data,k){
-            table_agents += "<tr><td style='padding:1px;'><button type='button' id='btn_user' class='btn_user_name' style='width:100%' value='" + data.name + "'>" + data.name + "</button></td></tr>";
+            table_agents += "<option value='" + data.name + "'>" + data.name + "</option>";
         });
 
       }else{
-        table_agents += "<tr><td id='no_agents'>Empty group.</td>";
+        table_agents = "-- Empty group. --";
       }
         
 
-        this.$("#agents").html(table_agents);
+        this.$("#d_agents").html(table_agents);
         
 
       });  
@@ -201,7 +191,6 @@
               table_tickets += "</table></div>";
 
               this.$("#tickets").html(table_tickets);
-              this.$("#name_agent").html("Current agent: " + event_name.currentTarget.value);
               
 
             });
