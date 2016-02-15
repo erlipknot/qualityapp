@@ -41,9 +41,10 @@
       'app.activated':'loadGroupsAgents',
       'change #groups':'loadAgents',
       'change #agents':'agent_info',
-      'click #datepicker_from':'showCalendar',
-      'click #datepicker_to':'showCalendar',
-      'click #button_via': 'showChannels'
+      'focus #datepicker_from':'showCalendar',
+      'focus #datepicker_to':'showCalendar',
+      'click #button_via': 'showChannels',
+      'change #filter_date':'showDates'
     },
 
     loadGroupsAgents: function() {
@@ -202,16 +203,17 @@
 
     showChannels:function(){
 
-      var d_channels = "<ul><li><input type='checkbox' name='ticket_via' value='email'>&nbsp;Email</li><li><input type='checkbox' name='ticket_via' value='chat'>&nbsp;Chat</li><li><input type='checkbox' name='ticket_via' value='voice'>&nbsp;Voice</li><li><input type='checkbox' name='ticket_via' value='social_media'>&nbsp;Social Media</li><li><input type='checkbox' name='ticket_via' value='good_rating'>&nbsp;Good Rating</li><li><input type='checkbox' name='ticket_via' value='bad_rating'>&nbsp;Bad Rating</li><li><input type='checkbox' name='ticket_via' value='good_rating_c'>&nbsp;Good Rating (c)</li><li><input type='checkbox' name='ticket_via' value='bad_rating_c'>&nbsp;Bad Rating (c)</li></ul>";
-      //this.$("#ticket_via").html(table_tickets);
         this.$("#ticket_via").toggle();
+
     },
 
-    showDates:function(){
+    showDates:function(e){
 
-      var d_channels = "<ul><li><input type='checkbox' name='ticket_via' value='email'>&nbsp;Email</li><li><input type='checkbox' name='ticket_via' value='chat'>&nbsp;Chat</li><li><input type='checkbox' name='ticket_via' value='voice'>&nbsp;Voice</li><li><input type='checkbox' name='ticket_via' value='social_media'>&nbsp;Social Media</li><li><input type='checkbox' name='ticket_via' value='good_rating'>&nbsp;Good Rating</li><li><input type='checkbox' name='ticket_via' value='bad_rating'>&nbsp;Bad Rating</li><li><input type='checkbox' name='ticket_via' value='good_rating_c'>&nbsp;Good Rating (c)</li><li><input type='checkbox' name='ticket_via' value='bad_rating_c'>&nbsp;Bad Rating (c)</li></ul>";
-      //this.$("#ticket_via").html(table_tickets);
-        this.$("#ticket_via").toggle();
+      if(e.currentTarget.value == "custom"){
+
+        this.$("#ticket_date").toggle();
+
+      }
     }
   };
 

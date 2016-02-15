@@ -37,6 +37,7 @@ td{
   width:20%;
   text-align: left;
   font-weight: normal;
+  padding: 10px 20px;
 }
 
 .th_right {
@@ -45,6 +46,7 @@ td{
   text-align: left;
   font-weight: normal;
   /*background-color: #f2f2f2;*/
+  padding: 10px 20px;
 }
 
 
@@ -85,6 +87,7 @@ td{
   font-size: 18px;
   text-align: left;
   height: 45px;
+  border-bottom: 1px solid #CFCFCF;
 }
 
 .submit_button{
@@ -175,4 +178,9 @@ td{
 
 .dropdown dd ul li a:hover {
   background-color: #fff;
+}
+
+.dp_filter{
+  width: 100%;
+  margin:5px 0px;
 }
